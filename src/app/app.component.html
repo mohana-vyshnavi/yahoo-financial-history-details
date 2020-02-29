@@ -2,7 +2,8 @@
     <!-- header for showing the title of the app and for changing between material and normal views -->
     <h1>{{title | titlecase}}</h1>
     <div class="view-section">
-        <button mat-raised-button [color]="activeView=='material'?'primary':''" (click)="appViewChanged('material')">Material
+        <button mat-raised-button [color]="activeView=='material'?'primary':''"
+            (click)="appViewChanged('material')">Material
             View</button>
         <button mat-raised-button [color]="activeView=='normal'?'primary':''" (click)="appViewChanged('normal')">Normal
             View</button>

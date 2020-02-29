@@ -7,14 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MatCardViewComponent implements OnInit {
 
-  @Input('apiData') apiData: any;
+  @Input() apiData: any;
   constructor() { }
-  monthArray=['January','February', 'March', 'April', 'May', 'June', 'July',
-  'August', 'September', 'October', 'November', 'December'];
+  monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+    'August', 'September', 'October', 'November', 'December'];
   ngOnInit() {
-  }
-  ngOnChanges(){
-    
   }
   getDay(date) {
     const dateValue = new Date(date);

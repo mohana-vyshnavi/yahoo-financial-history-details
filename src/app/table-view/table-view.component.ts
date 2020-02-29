@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TableViewComponent implements OnInit {
 
-  @Input('apiData') apiData: any;
+  @Input() apiData: any;
 
   constructor() { }
 
