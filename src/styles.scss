@@ -2,11 +2,15 @@
 
 html,
 body {
-    height: 92%;
+    height: 90%;
     margin: 2%;
 }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-sort-header-arrow {
+    color: #eee !important;
 }
