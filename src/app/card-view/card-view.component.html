@@ -1,13 +1,14 @@
-<p>card-view works!</p>
-<div class="normal-card-view">
-    <div class="date-header">date: 29-02-2019</div>
-    <div class="sub-cards">
-        <div class="sub-card">open: 29022019</div>
-        <div class="sub-card">high: 2022019</div>
+<div class="normal-cards-view">
+    <div class="normal-card-view" *ngFor="let item of apiData">
+        <div class="date-header">Date: {{item.Date}}</div>
+        <div class="sub-cards">
+            <div class="sub-card"><b>Open</b>:<br /> {{item.Open}}</div>
+            <div class="sub-card"><b>High</b>:<br /> {{item.High}}</div>
+        </div>
+        <div class="sub-cards">
+            <div class="sub-card"><b>Low</b>:<br /> {{item.Low}}</div>
+            <div class="sub-card"><b>Close</b>:<br /> {{item.Close}}</div>
+        </div>
+        <div class="volume-footer"><b>Volume</b>: {{item.Volume}}</div>
     </div>
-    <div class="sub-cards">
-        <div class="sub-card">low: 022019</div>
-        <div class="sub-card">close: 2902019</div>
-    </div>
-    <div class="volume-footer">volume: 29022019</div>
 </div>

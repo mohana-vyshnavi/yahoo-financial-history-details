@@ -1,25 +1,27 @@
-<mat-card>
-    <mat-card-header>
-        <div mat-card-avatar class="example-header-image">10</div>
-        <mat-card-title>Feb</mat-card-title>
-        <mat-card-subtitle>2020</mat-card-subtitle>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-        <mat-card class="mat-sub-card">
-            <p>open:<br /> 47263179</p>
-        </mat-card>
-        <mat-card class="mat-sub-card">
-            <p>high:<br /> 47263179</p>
-        </mat-card>
-        <mat-card class="mat-sub-card">
-            <p>low:<br /> 47263179</p>
-        </mat-card>
-        <mat-card class="mat-sub-card">
-            <p>close:<br /> 47263179</p>
-        </mat-card>
-    </mat-card-content>
-    <mat-card-footer>
-        <p> volume: 36752374 </p>
-    </mat-card-footer>
-</mat-card>
+<div class="mat-card-view">
+    <mat-card *ngFor="let item of apiData">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image">{{getDay(item.Date)}}</div>
+            <mat-card-title>{{getMonth(item.Date)}}</mat-card-title>
+            <mat-card-subtitle>{{getYear(item.Date)}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-card class="mat-sub-card">
+                <p><b>Open</b>:<br /> {{item.Open}}</p>
+            </mat-card>
+            <mat-card class="mat-sub-card">
+                <p><b>High</b>:<br /> {{item.High}}</p>
+            </mat-card>
+            <mat-card class="mat-sub-card">
+                <p><b>Low</b>:<br /> {{item.Low}}</p>
+            </mat-card>
+            <mat-card class="mat-sub-card">
+                <p><b>Close</b>:<br /> {{item.Close}}</p>
+            </mat-card>
+        </mat-card-content>
+        <mat-card-footer>
+            <p> <b>Volume</b>: {{item.Volume}} </p>
+        </mat-card-footer>
+    </mat-card>
+</div>

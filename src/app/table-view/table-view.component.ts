@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-table-view',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-view.component.scss']
 })
 export class TableViewComponent implements OnInit {
+
+  @Input('apiData') apiData: any;
 
   constructor() { }
 

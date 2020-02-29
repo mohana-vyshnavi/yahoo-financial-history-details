@@ -4,6 +4,6 @@
     </mat-card>
 </div>
 <div class="inner-body">
-    <app-mat-table-view *ngIf="subViewType=='table'"></app-mat-table-view>
-    <app-mat-card-view *ngIf="subViewType=='card'"></app-mat-card-view>
+    <app-mat-table-view [apiData]="apiData" *ngIf="subViewType=='table'"></app-mat-table-view>
+    <app-mat-card-view [apiData]="apiData" *ngIf="subViewType=='card'"></app-mat-card-view>
 </div>

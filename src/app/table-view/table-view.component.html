@@ -1,18 +1,18 @@
 <table>
     <tr>
-        <th>col 1</th>
-        <th>col 2</th>
-        <th>col 2</th>
-        <th>col 2</th>
-        <th>col 2</th>
-        <th>col 2</th>
+        <th>Date</th>
+        <th>Open</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Close</th>
+        <th>Volume</th>
     </tr>
-    <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20,1,1,1,1]">
-        <td>data 1</td>
-        <td>data 2</td>
-        <td>data 2</td>
-        <td>data 2</td>
-        <td>data 2</td>
-        <td>data 2</td>
+    <tr *ngFor="let item of apiData">
+        <td>{{item.Date}}</td>
+        <td>{{item.Open}}</td>
+        <td>{{item.High}}</td>
+        <td>{{item.Low}}</td>
+        <td>{{item.Close}}</td>
+        <td>{{item.Volume}}</td>
     </tr>
 </table>

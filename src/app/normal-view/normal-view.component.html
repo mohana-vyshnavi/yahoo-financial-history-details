@@ -9,6 +9,6 @@
     </div>
 </div>
 <div class="inner-body">
-    <app-table-view *ngIf="subViewType=='table'"></app-table-view>
-    <app-card-view *ngIf="subViewType=='card'"></app-card-view>
+    <app-table-view [apiData]="apiData" *ngIf="subViewType=='table'"></app-table-view>
+    <app-card-view [apiData]="apiData" *ngIf="subViewType=='card'"></app-card-view>
 </div>

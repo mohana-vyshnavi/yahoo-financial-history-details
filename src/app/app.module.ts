@@ -13,6 +13,8 @@ import { NormalViewComponent } from './normal-view/normal-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatButtonToggleModule, MatCardModule, MatDividerModule, MatTableModule, MatSortModule, MatPaginatorModule, MatSlideToggleModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
+import { ApiCallService } from './api-call.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,10 @@ import { CommonModule } from '@angular/common';
     MatPaginatorModule,
     CommonModule,
     MatButtonModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ApiCallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

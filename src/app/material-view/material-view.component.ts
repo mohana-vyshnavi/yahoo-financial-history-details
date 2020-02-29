@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiCallService } from '../api-call.service';
 
 @Component({
   selector: 'app-material-view',
@@ -8,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class MaterialViewComponent implements OnInit {
   slideText = 'Slide for card view'
   subViewType = 'table';
-  constructor() { }
+  apiData: any = [];
+  constructor(public apiService: ApiCallService) {
+    this.apiService.getData().subscribe((result: any) => {
+      this.apiData = result.sort(function (a, b) {
+        const date1 = new Date(a.Date);
+        const date2 = new Date(b.Date);
+        return (date1.getMilliseconds() - date2.getMilliseconds()) ? true : false;
+      }).reverse();
+    })
+  }
 
   ngOnInit() {
   }
