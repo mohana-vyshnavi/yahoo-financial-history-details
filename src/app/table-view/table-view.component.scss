@@ -1,0 +1,28 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-y: auto;
+
+    td {
+        border: 1px solid #eee;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        border: 1px solid #2196F3;
+        text-align: left;
+        height: 30px;
+        padding: 8px;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    tr:first-child {
+        background-color: #2196F3;
+        color: white
+    }
+}
