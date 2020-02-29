@@ -1,6 +1,8 @@
 header {
     align-items: center;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+    ;
+
     @media screen and (min-width: 790px) {
         display: flex;
 
@@ -42,5 +44,12 @@ footer {
     p {
         width: 100%;
         text-align: center;
+
+
+        @media screen and (max-width: 320px) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
     }
 }
