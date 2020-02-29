@@ -1,26 +1,28 @@
 <div class="mat-card-view">
+    <!-- mat- cards for looping cards design -->
     <mat-card *ngFor="let item of apiData">
         <mat-card-header>
+            <!-- date card -->
             <div mat-card-avatar class="example-header-image">{{getDay(item.Date)}}</div>
             <mat-card-title>{{getMonth(item.Date)}}</mat-card-title>
             <mat-card-subtitle>{{getYear(item.Date)}}</mat-card-subtitle>
         </mat-card-header>
         <mat-divider></mat-divider>
         <mat-card-content>
+            <!-- open, High, Low and close data cards -->
             <mat-card class="mat-sub-card">
                 <p><b>Open</b>:<br /> {{item.Open}}</p>
-            </mat-card>
-            <mat-card class="mat-sub-card">
+                <mat-divider></mat-divider>
                 <p><b>High</b>:<br /> {{item.High}}</p>
             </mat-card>
             <mat-card class="mat-sub-card">
                 <p><b>Low</b>:<br /> {{item.Low}}</p>
-            </mat-card>
-            <mat-card class="mat-sub-card">
+                <mat-divider></mat-divider>
                 <p><b>Close</b>:<br /> {{item.Close}}</p>
             </mat-card>
         </mat-card-content>
         <mat-card-footer>
+            <!-- volume in footer -->
             <p> <b>Volume</b>: {{item.Volume}} </p>
         </mat-card-footer>
     </mat-card>

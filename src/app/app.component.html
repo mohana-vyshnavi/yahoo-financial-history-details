@@ -2,16 +2,20 @@
     <!-- header for showing the title of the app and for changing between material and normal views -->
     <h1>{{title | titlecase}}</h1>
     <div class="view-section">
+        <!-- material view button -->
         <button mat-raised-button [color]="activeView=='material'?'primary':''"
             (click)="appViewChanged('material')">Material
             View</button>
+        <!-- normal view button -->
         <button mat-raised-button [color]="activeView=='normal'?'primary':''" (click)="appViewChanged('normal')">Normal
             View</button>
     </div>
 </header>
 <section>
+    <!-- main body where all the history data being rendered in different views -->
     <router-outlet></router-outlet>
 </section>
 <footer>
-    <p> This is a small POC done by Mohana Vyshnavi @2019.</p>
+    <!-- Footer for displaying the details of the site for copyrights -->
+    <p> This is a small POC done by Mohana Vyshnavi @2020.</p>
 </footer>

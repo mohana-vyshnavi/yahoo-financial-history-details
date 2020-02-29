@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardViewComponent implements OnInit {
 
-  @Input() apiData: any;
+  @Input() apiData: any; // api data from normal view component
 
   constructor() { }
 

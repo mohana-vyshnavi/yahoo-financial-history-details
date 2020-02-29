@@ -1,9 +1,11 @@
 <div class="mat-body">
     <mat-card>
+        <!-- slider for chainging table and card views-->
         <mat-slide-toggle color="primary" (change)="changeView($event)">{{slideText}}</mat-slide-toggle>
     </mat-card>
 </div>
 <div class="inner-body">
+    <!-- different views, table and card -->
     <app-mat-table-view [apiData]="apiData" *ngIf="subViewType=='table'"></app-mat-table-view>
     <app-mat-card-view [apiData]="apiData" *ngIf="subViewType=='card'"></app-mat-card-view>
 </div>

@@ -8,27 +8,31 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./normal-view.component.scss']
 })
 export class NormalViewComponent implements OnInit, OnDestroy {
-  slideText = 'Slide for card view';
-  subViewType = 'table';
-  apiData: any = [];
-  apiSub: Subscription;
+  slideText = 'Slide for card view'; // message fro the use understanding
+  subViewType = 'table'; // to know which view the user in.
+  apiData: any = []; // api data to pass for child components
+  apiSub: Subscription; // for unsubscribing
   constructor(public apiService: ApiCallService) {
+    // json data htpp api call subscription
     this.apiSub = this.apiService.getData().subscribe((result: any) => {
       this.apiData = result.sort((a, b) => {
         const date1 = new Date(a.Date);
         const date2 = new Date(b.Date);
         return (date1.getMilliseconds() - date2.getMilliseconds()) ? true : false;
       }).reverse();
+      // the above code is for sorting the date and reversing the array for displaying the latest update
     });
   }
 
   ngOnInit() {
   }
   changeView(event) {
-    this.subViewType = event.checked === true ? 'card' : 'table';
-    this.slideText = event.checked === true ? 'Slide for table view' : 'Slide for card view';
+    //  when user tchenges the view from table to cards
+    this.subViewType = event.target.checked === true ? 'card' : 'table';
+    this.slideText = event.target.checked === true ? 'Slide for table view' : 'Slide for card view';
   }
   ngOnDestroy() {
+    // to unsubscribe the api on the component destruction.
     this.apiSub.unsubscribe();
   }
 }

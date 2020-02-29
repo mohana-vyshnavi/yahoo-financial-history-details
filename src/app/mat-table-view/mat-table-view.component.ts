@@ -7,15 +7,15 @@ import { MatTableDataSource, MatSort } from '@angular/material';
   styleUrls: ['./mat-table-view.component.scss']
 })
 export class MatTableViewComponent implements OnInit, OnChanges {
-  displayedColumns: string[] = ['date', 'open', 'high', 'low', 'close', 'volume'];
-  dataSource = new MatTableDataSource();
-  @Input() apiData: any;
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  displayedColumns: string[] = ['Date', 'Open', 'High', 'Low', 'Close', 'Volume']; // colums data
+  dataSource = new MatTableDataSource(); // table data
+  @Input() apiData: any; // api data
+  @ViewChild(MatSort, { static: true }) sort: MatSort; // mat sot variable
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
   }
   ngOnChanges() {
+    // when ever data is changed the table data is reasigned
     this.dataSource = new MatTableDataSource(this.apiData);
     this.dataSource.sort = this.sort;
   }

@@ -7,6 +7,7 @@ export class ApiCallService {
   constructor(public http: HttpClient) {
   }
   getData() {
+    // http get call for getting the data from json file in assets
     return this.http.get('./assets/data.json');
   }
 }

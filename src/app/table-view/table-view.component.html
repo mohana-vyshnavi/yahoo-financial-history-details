@@ -1,5 +1,7 @@
+<!-- normal view table -->
 <table>
     <tr>
+        <!-- table header -->
         <th>Date</th>
         <th>Open</th>
         <th>High</th>
@@ -7,6 +9,7 @@
         <th>Close</th>
         <th>Volume</th>
     </tr>
+    <!-- table body  -->
     <tr *ngFor="let item of apiData">
         <td>{{item.Date}}</td>
         <td>{{item.Open}}</td>

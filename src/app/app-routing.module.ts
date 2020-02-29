@@ -5,10 +5,10 @@ import { NormalViewComponent } from './normal-view/normal-view.component';
 
 
 const routes: Routes = [
-  {
+  { // path for material view
     path: 'material-view', component: MaterialViewComponent
   },
-  {
+  { // path for normal view
     path: 'normal-view', component: NormalViewComponent
   }
 ];

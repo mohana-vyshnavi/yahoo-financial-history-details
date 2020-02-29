@@ -1,14 +1,16 @@
 <div class="main-body">
     <div class="header-card">
+        <!-- toogle switch -->
         <label class="switch">
             <input type="checkbox" (click)="changeView($event)">
             <span class="slider round"></span>
         </label>
-
+        <!-- user message -->
         <span class="slider-text">{{slideText}}</span>
     </div>
 </div>
 <div class="inner-body">
+    <!-- two different normal view -->
     <app-table-view [apiData]="apiData" *ngIf="subViewType=='table'"></app-table-view>
     <app-card-view [apiData]="apiData" *ngIf="subViewType=='card'"></app-card-view>
 </div>

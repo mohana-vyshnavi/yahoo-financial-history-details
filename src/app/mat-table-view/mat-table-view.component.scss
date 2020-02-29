@@ -1,8 +1,14 @@
 table {
     width: 94%;
     margin: auto;
+
     th {
         background-color: #3f51b5;
         color: white;
+    }
+
+    td {
+        border-left: 1px solid #ccc;
+        padding-left: 1%;
     }
 }

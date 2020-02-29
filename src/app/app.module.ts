@@ -46,7 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [ApiCallService],
+  providers: [ApiCallService], // api call service for geting json data
   bootstrap: [AppComponent]
 })
 export class AppModule { }
