@@ -11,7 +11,7 @@ import { ErrorModalComponent } from './error-modal/error-modal.component';
 import { MaterialViewComponent } from './material-view/material-view.component';
 import { NormalViewComponent } from './normal-view/normal-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatButtonToggleModule } from '@angular/material';
+import { MatButtonModule, MatButtonToggleModule, MatCardModule, MatDividerModule, MatTableModule, MatSortModule, MatPaginatorModule, MatSlideToggleModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -29,6 +29,12 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     MatButtonToggleModule,
+    MatCardModule,
+    MatDividerModule,
+    MatTableModule,
+    MatSlideToggleModule,
+    MatSortModule,
+    MatPaginatorModule,
     CommonModule,
     MatButtonModule,
     BrowserAnimationsModule

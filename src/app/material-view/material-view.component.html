@@ -1,1 +1,7 @@
-<p>material-view works!</p>
+<div class="mat-body">
+    <mat-card>
+        <mat-slide-toggle color="primary" (change)="changeView($event)">{{slideText}}</mat-slide-toggle>
+    </mat-card>
+    <app-mat-table-view *ngIf="subViewType=='table'"></app-mat-table-view>
+    <app-mat-card-view *ngIf="subViewType=='card'"></app-mat-card-view>
+</div>
