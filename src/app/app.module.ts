@@ -8,6 +8,11 @@ import { MatTableViewComponent } from './mat-table-view/mat-table-view.component
 import { MatCardViewComponent } from './mat-card-view/mat-card-view.component';
 import { CardViewComponent } from './card-view/card-view.component';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
+import { MaterialViewComponent } from './material-view/material-view.component';
+import { NormalViewComponent } from './normal-view/normal-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatButtonToggleModule } from '@angular/material';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,11 +21,17 @@ import { ErrorModalComponent } from './error-modal/error-modal.component';
     MatTableViewComponent,
     MatCardViewComponent,
     CardViewComponent,
-    ErrorModalComponent
+    ErrorModalComponent,
+    MaterialViewComponent,
+    NormalViewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonToggleModule,
+    CommonModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

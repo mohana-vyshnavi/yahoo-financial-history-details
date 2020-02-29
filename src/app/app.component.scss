@@ -1,0 +1,44 @@
+header {
+    align-items: center;
+
+    @media screen and (min-width: 790px) {
+        display: flex;
+
+        h1 {
+            width: 70%;
+        }
+
+        .view-section {
+            width: 30%;
+
+            button {
+                border-radius: 0px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 790px) {
+        h1 {
+            width: 100%;
+        }
+
+        .view-section {
+            width: 100%;
+
+            button {
+                border-radius: 0px;
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 10px;
+
+    p {
+        width: 100%;
+        text-align: center;
+    }
+}
