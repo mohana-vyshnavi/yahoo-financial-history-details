@@ -15,10 +15,12 @@ export class NormalViewComponent implements OnInit, OnDestroy {
   constructor(public apiService: ApiCallService) {
     // json data htpp api call subscription
     this.apiSub = this.apiService.getData().subscribe((result: any) => {
+      result.prices = result.prices.map((obj) => {
+        obj.date=new Date(obj.date);
+        return obj;
+      });
       this.apiData = result.prices.sort((a, b) => {
-        const date1 = new Date(a.date);
-        const date2 = new Date(b.date);
-        return (date1.getMilliseconds() - date2.getMilliseconds()) ? true : false;
+        return (a.date - b.date) ? true : false;
       }).reverse();
       // the above code is for sorting the date and reversing the array for displaying the latest update
     });
