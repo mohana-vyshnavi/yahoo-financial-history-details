@@ -8,6 +8,6 @@ export class ApiCallService {
   }
   getData() {
     // http get call for getting the data from json file in assets
-    return this.http.get('./assets/data.json');
+    return this.http.get('/getHistroy/getData');
   }
 }
