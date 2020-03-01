@@ -3,27 +3,27 @@
     <mat-card *ngFor="let item of apiData">
         <mat-card-header>
             <!-- date card -->
-            <div mat-card-avatar class="example-header-image">{{getDay(item.Date)}}</div>
-            <mat-card-title>{{getMonth(item.Date)}}</mat-card-title>
-            <mat-card-subtitle>{{getYear(item.Date)}}</mat-card-subtitle>
+            <div mat-card-avatar class="example-header-image">{{getDay(item.date)}}</div>
+            <mat-card-title>{{getMonth(item.date)}}</mat-card-title>
+            <mat-card-subtitle>{{getYear(item.date)}}</mat-card-subtitle>
         </mat-card-header>
         <mat-divider></mat-divider>
         <mat-card-content>
             <!-- open, High, Low and close data cards -->
             <mat-card class="mat-sub-card">
-                <p><b>Open</b>:<br /> {{item.Open}}</p>
+                <p><b>Open</b>:<br /> {{item.open}}</p>
                 <mat-divider></mat-divider>
-                <p><b>High</b>:<br /> {{item.High}}</p>
+                <p><b>High</b>:<br /> {{item.high}}</p>
             </mat-card>
             <mat-card class="mat-sub-card">
-                <p><b>Low</b>:<br /> {{item.Low}}</p>
+                <p><b>Low</b>:<br /> {{item.low}}</p>
                 <mat-divider></mat-divider>
-                <p><b>Close</b>:<br /> {{item.Close}}</p>
+                <p><b>Close</b>:<br /> {{item.close}}</p>
             </mat-card>
         </mat-card-content>
         <mat-card-footer>
             <!-- volume in footer -->
-            <p> <b>Volume</b>: {{item.Volume}} </p>
+            <p> <b>Volume</b>: {{item.volume}} </p>
         </mat-card-footer>
     </mat-card>
 </div>

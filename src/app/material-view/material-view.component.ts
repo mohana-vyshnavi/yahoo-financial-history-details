@@ -15,9 +15,9 @@ export class MaterialViewComponent implements OnInit, OnDestroy {
   constructor(public apiService: ApiCallService) {
     // json data htpp api call subscription
     this.apiSub = this.apiService.getData().subscribe((result: any) => {
-      this.apiData = result.sort((a, b) => {
-        const date1 = new Date(a.Date);
-        const date2 = new Date(b.Date);
+      this.apiData = result.prices.sort((a, b) => {
+        const date1 = new Date(a.date);
+        const date2 = new Date(b.date);
         return (date1.getMilliseconds() - date2.getMilliseconds()) ? true : false;
       }).reverse();
       // the above code is for sorting the date and reversing the array for displaying the latest update

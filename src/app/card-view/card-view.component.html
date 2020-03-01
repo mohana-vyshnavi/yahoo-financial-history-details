@@ -2,18 +2,18 @@
     normal cards view loopinga
     <div class="normal-card-view" *ngFor="let item of apiData">
         <!-- date card -->
-        <div class="date-header"><b>Date</b>: <br/> {{item.Date}}</div>
+        <div class="date-header"><b>Date</b>: <br/> {{item.date}}</div>
         <div class="sub-cards">
             <!-- open and high cards -->
-            <div class="sub-card"><b>Open</b>:<br /> {{item.Open}}</div>
-            <div class="sub-card"><b>High</b>:<br /> {{item.High}}</div>
+            <div class="sub-card"><b>Open</b>:<br /> {{item.open}}</div>
+            <div class="sub-card"><b>High</b>:<br /> {{item.high}}</div>
         </div>
         <div class="sub-cards">
             <!-- low and close cards -->
-            <div class="sub-card"><b>Low</b>:<br /> {{item.Low}}</div>
-            <div class="sub-card"><b>Close</b>:<br /> {{item.Close}}</div>
+            <div class="sub-card"><b>Low</b>:<br /> {{item.low}}</div>
+            <div class="sub-card"><b>Close</b>:<br /> {{item.close}}</div>
         </div>
         <!-- volume card -->
-        <div class="volume-footer"><b>Volume</b>: {{item.Volume}}</div>
+        <div class="volume-footer"><b>Volume</b>: {{item.volume}}</div>
     </div>
 </div>
