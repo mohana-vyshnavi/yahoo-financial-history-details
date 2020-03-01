@@ -36,6 +36,7 @@ mat-card-content {
     .mat-sub-card {
         width: 50%;
         margin: 0 5px 0 0;
+
         mat-divider {
             position: relative;
         }
@@ -46,6 +47,15 @@ mat-card-content {
 
         p {
             min-width: 100px;
+
+            @media screen and (max-width: 320px) {
+                max-width: 80px;
+                min-width: 50px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
         }
     }
 }

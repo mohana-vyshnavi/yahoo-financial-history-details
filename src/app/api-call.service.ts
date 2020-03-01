@@ -16,4 +16,7 @@ export class ApiCallService {
         }
       });
   }
+  getDataFromJson() {
+    return this.http.get('./assets/data.json');
+  }
 }

@@ -10,5 +10,12 @@ table {
     td {
         border-left: 1px solid #ccc;
         padding-left: 1%;
+
+        @media screen and (max-width: 320px) {
+            max-width: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
     }
 }
